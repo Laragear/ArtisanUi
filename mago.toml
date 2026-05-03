@@ -1,0 +1,78 @@
+version = "1"
+php-version = "8.5.0"
+
+[source]
+workspace = "."
+paths = ["src/", "database/", "config/", "lang/"]
+includes = ["vendor/"]
+excludes = ["vendor/_laravel_idea/_ide_helper_models_Laragear_MetaTesting_Eloquent.php"]
+
+[source.glob]
+literal-separator = true
+
+[formatter]
+preset = "pint"
+space-after-logical-not-unary-prefix-operator=true
+space-within-grouping-parenthesis=false
+inline-empty-control-braces=true
+inline-empty-closure-braces=true
+inline-empty-function-braces=true
+inline-empty-method-braces=true
+inline-empty-constructor-braces=true
+inline-empty-classlike-braces=true
+inline-empty-anonymous-class-braces=true
+
+[linter]
+integrations = ["laravel"]
+baseline = "mago-lint-baseline.toml"
+
+[linter.rules]
+ambiguous-function-call = { enabled = false }
+literal-named-argument = { enabled = false }
+halstead = { effort-threshold = 7000 }
+strict-types = { enabled = false }
+no-empty-comment = { preserve-single-line-comments = true }
+too-many-methods = { threshold = 20 }
+excessive-parameter-list = { threshold = 10 }
+no-shorthand-ternary = { enabled = false }
+braced-string-interpolation = { enabled = false }
+no-isset = { allow-array-checks = true }
+
+
+[analyzer]
+baseline = "mago-analyze-baseline.toml"
+plugins = []
+ignore = [
+  { code = "mixed-argument", in = "src/" },
+  { code = "mixed-assignment", in = "src/" },
+  { code = "possibly-invalid-argument", in = "src/" },
+  { code = "invalid-array-element-key", in = "src/" },
+  { code = "less-specific-return-statement", in = "src/" },
+  { code = "mixed-return-statement", in = "src/" },
+  { code = "non-documented-method", in = "src/" },
+  { code = "mixed-property-type-coercion", in = "src/" },
+  { code = "invalid-property-write", in = "src/" },
+  { code = "non-existent-property", in = "src/*/Concerns/*" },
+  { code = "mixed-operand", in = "src/" },
+  { code = "mixed-method-access", in = "src/" },
+  { code = "non-existent-method", in = "src/" },
+  { code = "possibly-null-operand", in = "src/" },
+  { code = "invalid-return-statement", in = "src/" },
+  { code = "possibly-null-argument", in = "src/" },
+  { code = "ambiguous-object-method-access", in = "src/" },
+  { code = "possible-method-access-on-null", in = "src/" },
+  { code = "no-value", in = "src/" },
+  { code = "falsable-return-statement", in = "src/" },
+]
+find-unused-definitions = true
+find-unused-expressions = false
+analyze-dead-code = false
+memoize-properties = true
+allow-possibly-undefined-array-keys = true
+check-throws = false
+check-missing-override = false
+find-unused-parameters = false
+strict-list-index-checks = false
+no-boolean-literal-comparison = false
+check-missing-type-hints = false
+register-super-globals = true

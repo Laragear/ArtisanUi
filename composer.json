@@ -1,0 +1,73 @@
+{
+    "name": "laragear/artisan-ui",
+    "description": "Interactive Artisan command browser UI",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "keywords": [
+        "laravel",
+        "artisan",
+        "cli",
+        "ui",
+        "interactive"
+    ],
+    "authors": [
+        {
+            "name": "Italo Israel Baeza Cabrera",
+            "email": "DarkGhostHunter@Gmail.com",
+            "role": "Developer",
+            "homepage": "https://github.com/sponsors/DarkGhostHunter"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/Laragear/ArtisanUi",
+        "issues": "https://github.com/Laragear/ArtisanUi/issues"
+    },
+    "require": {
+        "php": "^8.3",
+        "illuminate/cache": "12.*|13.*",
+        "illuminate/console": "12.*|13.*",
+        "illuminate/support": "12.*|13.*",
+        "laravel/prompts": "^0.3.17"
+    },
+    "require-dev": {
+        "laragear/meta-testing": "4.*",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "10.*|11.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laragear\\ArtisanUi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --coverage-clover build/logs/clover.xml",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laragear\\ArtisanUi\\ArtisanUiServiceProvider"
+            ]
+        }
+    },
+    "funding": [
+        {
+            "type": "Github Sponsorship",
+            "url": "https://github.com/sponsors/DarkGhostHunter"
+        },
+        {
+            "type": "Paypal",
+            "url": "https://paypal.me/darkghosthunter"
+        }
+    ]
+}

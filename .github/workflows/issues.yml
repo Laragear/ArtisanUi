@@ -1,0 +1,10 @@
+name: Issue Reproduction Check
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  call-workflow:
+    uses: Laragear/.github/.github/workflows/issue-manager.yml@main
+    secrets: inherit

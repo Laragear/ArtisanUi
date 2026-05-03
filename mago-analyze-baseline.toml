@@ -1,0 +1,19 @@
+variant = "loose"
+
+[[issues]]
+file = "src/Console/ArtisanUiCommand.php"
+code = "array-to-string-conversion"
+message = "Potentially casting `array` to `string`."
+count = 1
+
+[[issues]]
+file = "src/Console/ArtisanUiCommand.php"
+code = "less-specific-nested-argument-type"
+message = 'Argument type mismatch for argument #2 of `Laravel\Prompts\SuggestPrompt::__construct`: expected `(closure(string): Illuminate\Support\Collection<int, string>|array<array-key, string>)|Illuminate\Support\Collection<int, string>|array<array-key, string>`, but provided type `(closure(string): mixed)` is less specific.'
+count = 1
+
+[[issues]]
+file = "src/Services/FuzzySearch.php"
+code = "less-specific-nested-return-statement"
+message = '''Returned type `Illuminate\Support\Collection<int, mixed>&static` is less specific than the declared return type `Illuminate\Support\Collection<int, Laragear\ArtisanUi\Services\Command\CommandEntry>` for function `Laragear\ArtisanUi\Services\FuzzySearch::search` due to nested 'mixed'.'''
+count = 2

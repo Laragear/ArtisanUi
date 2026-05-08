@@ -10,7 +10,7 @@ Interactive Artisan command browser UI.
 
     > php artisan ui
 
-    ┌ ⚡ Laragear Artisan UI ───────────────────────────────────────┐
+    ┌ ⚡ Laragear Artisan UI ──────────────────────────────────────┐
     │ ab                                                           │
     ├──────────────────────────────────────────────────────────────┤
     │ › about                                                    ┃ │
